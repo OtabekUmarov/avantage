@@ -1,0 +1,90 @@
+{
+    "input-search": "Search",
+    "label": {
+        "name": "Name",
+        "phone": "Phone number",
+        "address": "Address",
+        "event": "Select an event",
+        "guest": "Number of guests",
+        "msg": "Message",
+        "opt": "Additional opportunity",
+        "enter-event": "Enter name",
+        "enter-guest": "Enter number"
+    },
+    "cart": {
+        "no-items": "No products yet",
+        "total": "Total"
+    },
+    "btn": {
+        "send": "Send form",
+        "send-default": "Send",
+        "write": "Write form",
+        "add": "Add",
+        "portfolio": "Portfolio",
+        "added": "Added",
+        "cart": "Cart",
+        "clear": "Clear",
+        "order": "Order",
+        "cancel": "Cancel"
+    },
+    "link": {
+        "about": "About us",
+        "equipment": "Equipment",
+        "catering": "Catering",
+        "stand": "Stands",
+        "registration": "Registration",
+        "contact": "Contacts"
+    },
+    "title": {
+        "about": "About us",
+        "equipment": "Equipment rental",
+        "catering": "Catering",
+        "stand": "Stand construction",
+        "registration": "Registration of visitors",
+        "contact": "Contacts",
+        "portfolio": "Portfolio"
+    },
+    "section": {
+        "about": {
+            "p-1": "Now, to organize a business event, you need to really work hard. If you do not have special knowledge in this area, it is best to contact a special company that can provide a whole team of professionals who are ready to take on the organization of the project and can perform it 100%.",
+            "p-2": "AVANTAGE is one of those companies that can take on the task of organizing and holding any type of event, as well as provide the best equipment for renting, allowing you to conduct high-quality and interesting events.",
+            "p-3": "We are ready to provide our clients with a full range of services, from concept development to implementation and implementation of events.",
+            "p-4": "Exhibitions, forums, conferences, presentations, catering organized by AVANTAGE allow our Clients to achieve their goals and are marked by positive feedback from participants and visitors.",
+            "p-5": "We are ready to effectively apply our experience in organizing any format of business events in the interests of your company.",
+            "card": {
+                "1": "years",
+                "2": "honorary diploma",
+                "3": "projects",
+                "4": "dissatisfied customers"
+            }
+        },
+        "equipment": {},
+        "catering": {
+            "p-1": "Mex CATERING, a member of the AVANTAGE group of companies, has been operating in the public catering market in Tashkent since 2016 and has extensive experience in organizing receptions, banquets, gala dinners, coffee breaks and other events of various types, including international ones.",
+            "p-2": "We provide an off-site restaurant on the territory that is convenient for you, as well as on the sites of our partners.",
+            "p-3": "MEX CATERING - we know the secret ingredient of the secret soup ingredient ;-)"
+        },
+        "stand": {
+            "p-1": "Exhibition stands - original form, beautiful and bright, well-thought-out designs that are designed to showcase products or exhibits from the best sides. To do this, the most important thing is how high-quality, convenient and safe the product is.",
+            "p-2": "AVANTAGE company has been conducting professional exhibition activities since 2016. Construction of exhibition stands is one of the services that our reliable contractors will be happy to provide.",
+            "p-3": "Thanks to the successful organization of its major industry projects, such as ICT WEEK Uzbekistan, AVANTAGE has become widely known in its own country and in several countries in Europe and Asia. In General, over the years, the company is constantly improving, gaining invaluable experience, and this allows us to organize work with exhibitors and guests of the exhibition at the highest level."
+        },
+        "registration": {
+            "p-1": "The main value for AVANTAGE employees is to provide the best possible service to their customers and visitors, which is reflected in solving the urgent tasks of registering and identifying the flow of visitors.",
+            "p-2": "Our registration system is aimed at automating the processes of registration of visitors for mass events. A full range of services for meeting and registering guests at events, organizing access control systems and collecting information about participants ' movements.",
+            "card": {
+                "1": "years on the market",
+                "2": "projects",
+                "3": "registered"
+            }
+        },
+        "contact": {
+            "name": "Uygun Tursunxodjaev",
+            "position": "Chief manager",
+            "mobile": "Phone",
+            "mobile-tg": "Phone+Tg",
+            "email": "Email",
+            "form-title": "Do you want to organize an event ?"
+        }
+    }
+}
