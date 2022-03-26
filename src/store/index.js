@@ -8,7 +8,11 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     content: {},
-    favourites: [],
+    form: {
+      name: '',
+      phone: '',
+      address:'',
+    }
   },
   actions: {
     async GetProducts({commit}) {
@@ -27,11 +31,10 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    GET_PRODUCTS: (state) => {
-      return state.products;
-    },
-    FAVOURITES_COUNT: (state) => {
-      return state.favourites.length;
-    },
+    ABOUT: state =>  state.content.aboutSection,
+    SERVICE: state =>  state.content.cateringSection,
+    STAND: state =>  state.content.standSection,
+    REGISTRATION: state =>  state.content.registerSection,
+    getForm: state => state.form,
   },
 });

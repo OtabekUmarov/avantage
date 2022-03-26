@@ -1,71 +1,74 @@
 <template>
-  <div class="header" :class="{'vh-100' : $route.path == '/' }" id="home" ref="home">
+  <div
+    class="header"
+    :class="{ 'vh-100': $route.path == '/' }"
+    id="home"
+    ref="home"
+  >
     <nav class="navbar navbar-expand-lg fixed-top" :class="[bgNav]" id="navbar">
-      <div class="container" ref="navContainer" :class="{'flex-row-reverse':opt.navContainer}">
+      <div
+        class="container"
+        ref="navContainer"
+        :class="{ 'flex-row-reverse': opt.navContainer }"
+      >
         <router-link
           to="/"
           class="navbar-brand"
           ref="brand"
-          :class="{'d-none':opt.brand}"
-        >{{brand}}</router-link>
+          :class="{ 'd-none': opt.brand }"
+          >{{ brand }}</router-link
+        >
         <button class="navbar-toggler" @click="toggleNav()">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="mobileNav text-center" :class="{show:isNavShow,'w-100':opt.nav}" ref="nav">
+        <div
+          class="mobileNav text-center"
+          :class="{ show: isNavShow, 'w-100': opt.nav }"
+          ref="nav"
+        >
           <ul
             class="navbar-nav ml-auto-lg align-self-stretch"
-            :class="{'justify-content-center':opt.navChild}"
+            :class="{ 'justify-content-center': opt.navChild }"
           >
             <li class="nav-item">
-              <router-link
-                to="/about"
-                class="nav-link hover-link"
-              >{{ $t('link.about') }}</router-link>
+              <router-link to="/about" class="nav-link hover-link">{{
+                $t("link.about")
+              }}</router-link>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link hover-link"
-                href="#equipment"
-                v-smooth-scroll="{ duration: 500, offset: -50, updateHistory: true }"
-                @click="hideNav()"
-              >{{ $t('link.equipment') }}</a>
+              <router-link to="/equipment" class="nav-link hover-link">{{
+                $t("link.equipment")
+              }}</router-link>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link hover-link"
-                href="#service"
-                v-smooth-scroll="{ duration: 500, offset: -50, updateHistory: true }"
-                @click="hideNav()"
-              >{{ $t('link.catering') }}</a>
+              <router-link to="/service" class="nav-link hover-link">{{
+                $t("link.catering")
+              }}</router-link>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link hover-link"
-                href="#stand"
-                v-smooth-scroll="{ duration: 500, offset: -50, updateHistory: true }"
-                @click="hideNav()"
-              >{{ $t('link.stand') }}</a>
+              <router-link to="/stand" class="nav-link hover-link">{{
+                $t("link.stand")
+              }}</router-link>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link hover-link"
-                href="#registration"
-                v-smooth-scroll="{ duration: 500, offset: -50, updateHistory: true }"
-                @click="hideNav()"
-              >{{ $t('link.registration') }}</a>
+              <router-link to="/registration" class="nav-link hover-link">{{
+                $t("link.registration")
+              }}</router-link>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link hover-link"
-                href="#contact"
-                v-smooth-scroll="{ duration: 500, offset: -50, updateHistory: true }"
-                @click="hideNav()"
-              >{{ $t('link.contact') }}</a>
+              <router-link to="/contact" class="nav-link hover-link">{{
+                $t("link.contact")
+              }}</router-link>
             </li>
             <li class="nav-item">
               <select class="form-control lang-select" v-model="$i18n.locale">
-                <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+                <option
+                  v-for="(lang, i) in langs"
+                  :key="`Lang${i}`"
+                  :value="lang"
+                  >{{ lang }}</option
+                >
               </select>
             </li>
           </ul>
@@ -75,14 +78,22 @@
     <div v-if="$route.path == '/'" class="d-flex">
       <div class="overlay"></div>
       <div class="header__overlay"></div>
-      <video  playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
         <source src="@/assets/video/video-hero.mp4" type="video/mp4" />
       </video>
-      <div class="container h-100" >
+      <div class="container h-100">
         <div class="d-flex h-100 text-center align-items-center">
           <div class="w-100 text-dark">
             <div class="container">
-              <img src="@/assets/logo.png" class="img-fluid rounded mx-auto d-block header__logo" />
+              <img
+                src="@/assets/logo.png"
+                class="img-fluid rounded mx-auto d-block header__logo"
+              />
             </div>
           </div>
         </div>
@@ -98,7 +109,7 @@ import "bootstrap";
 export default {
   name: "Header",
   props: {
-    brand: String
+    brand: String,
   },
   data() {
     return {
@@ -110,51 +121,52 @@ export default {
         brand: true,
         navContainer: true,
         nav: true,
-        navChild: true
-      }
+        navChild: true,
+      },
     };
   },
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
     this.height = document.getElementById("home").clientHeight;
-    if(this.$route.path != '/') {
-        this.bgNav = "bg-white navbar-light";
-          this.opt.brand = false;
-          this.opt.navContainer = false;
-          this.opt.nav = false;
-          this.opt.navChild = false;
-          } else {
-            this.bgNav = "bg-transparent navbar-dark";
-            this.opt.brand = true;
-            this.opt.navContainer = true;
-            this.opt.nav = true;
-            this.opt.navChild = true;
-          }
+    if (this.$route.path != "/") {
+      this.bgNav = "bg-white navbar-light";
+      this.opt.brand = false;
+      this.opt.navContainer = false;
+      this.opt.nav = false;
+      this.opt.navChild = false;
+    } else {
+      this.bgNav = "bg-transparent navbar-dark";
+      this.opt.brand = true;
+      this.opt.navContainer = true;
+      this.opt.nav = true;
+      this.opt.navChild = true;
+    }
   },
   watch: {
     "$route.path": {
       handler: function(val) {
-      if(val != '/') {
-        this.bgNav = "bg-white navbar-light";
+        this.isNavShow = false
+        if (val != "/") {
+          this.bgNav = "bg-white navbar-light";
           this.opt.brand = false;
           this.opt.navContainer = false;
           this.opt.nav = false;
           this.opt.navChild = false;
-          } else {
-            this.bgNav = "bg-transparent navbar-dark";
-            this.opt.brand = true;
-            this.opt.navContainer = true;
-            this.opt.nav = true;
-            this.opt.navChild = true;
-          }
-      }
+        } else {
+          this.bgNav = "bg-transparent navbar-dark";
+          this.opt.brand = true;
+          this.opt.navContainer = true;
+          this.opt.nav = true;
+          this.opt.navChild = true;
+        }
+      },
     },
     "$i18n.locale": {
       handler: function(val) {
         window.localStorage.setItem("lang", JSON.stringify(val));
         // window.location.reload();
-      }
-    }
+      },
+    },
   },
   methods: {
     toggleNav() {
@@ -198,8 +210,8 @@ export default {
           this.opt.navChild = true;
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

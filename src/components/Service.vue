@@ -36,7 +36,7 @@
                   data-aos-easing="ease-in-out"
                   data-aos-once="false"
                 >
-                  <swiper-slide v-for="item in content.carousel" :key="item.image">
+                  <swiper-slide v-for="item in (content && content.carousel)" :key="item.image">
                     <img v-lazy="item.image" :alt="item.alt" />
                   </swiper-slide>
                 </swiper>
@@ -64,7 +64,7 @@
                       v-if="!isNewEvent"
                       required
                     >
-                      <option v-for="item in content.events" :key="item.id">{{ item.title }}</option>
+                      <option v-for="item in (content && content.events)" :key="item.id">{{ item.title }}</option>
                     </select>
                     <input
                       type="text"

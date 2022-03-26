@@ -1,7 +1,7 @@
 <template>
   <div class="section" id="contact">
     <div class="container">
-      <h3 class="section__title">{{title}}</h3>
+      <h3 class="section__title">{{ title }}</h3>
       <div class="section__body">
         <div class="row">
           <div class="col-lg-8">
@@ -31,34 +31,56 @@
                 >
                   <div class="row no-gutters">
                     <div class="col">
-                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                      <div
+                        class="card-body d-flex flex-column justify-content-between h-100"
+                      >
                         <div class="card-top">
-                          <h5 class="card-title">{{ $t('section.contact.name') }}</h5>
+                          <h5 class="card-title">
+                            {{ $t("section.contact.name") }}
+                          </h5>
                           <div class="cart-text">
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">{{ $t('section.contact.position') }}</li>
+                              <li class="list-group-item">
+                                {{ $t("section.contact.position") }}
+                              </li>
                               <!-- <li
                                 class="list-group-item"
                               >{{ $t('section.contact.mobile') }}: +998951440444</li>-->
                               <li class="list-group-item">
-                                <img src="" style="width:20px; height:25px;" /> +998951440444
+                                <a href="tel:+998951440444">
+                                  <img
+                                    src="@/assets/icons/p.svg"
+                                    style="width:20px; height:25px;"
+                                  />
+                                  +998951440444
+                                </a>
                               </li>
                               <li class="list-group-item">
-                                <img
-                                  src="@/assets/icons/ps.svg"
-                                  style="width:20px; margin-left:3px; margin-right:-2px"
-                                /> +998909870101
+                                <a href="tel:+998909870101">
+                                  <img
+                                    src="@/assets/icons/ps.svg"
+                                    style="width:20px; margin-left:3px; margin-right:-2px"
+                                  />
+                                  +998909870101
+                                </a>
                               </li>
                               <li class="list-group-item">
-                                <img
-                                  src="@/assets/icons/email.svg"
-                                  style="width:20px; height:25px; margin-right: 2px;margin-left: 1px;"
-                                /> info@avantage.events
+                                <a href="mailto:info@avantage.events">
+                                  <img
+                                    src="@/assets/icons/email.svg"
+                                    style="width:20px; height:25px; margin-right: 2px;margin-left: 1px;"
+                                  />
+                                  info@avantage.events
+                                </a>
                               </li>
                               <li class="list-group-item">
                                 <div class="row">
                                   <div class="col-4 text-center">
-                                    <a href="#" class="social-link">
+                                    <a
+                                      href="https://www.facebook.com/avantage.events.agency"
+                                      target="_blank"
+                                      class="social-link"
+                                    >
                                       <svg
                                         id="Capa_1"
                                         enable-background="new 0 0 512 512"
@@ -74,7 +96,11 @@
                                     </a>
                                   </div>
                                   <div class="col-4 text-center">
-                                    <a href="#" class="social-link">
+                                    <a
+                                      href="https://www.instagram.com/avantage.events.agency/"
+                                      target="_blank"
+                                      class="social-link"
+                                    >
                                       <svg
                                         height="25"
                                         viewBox="0 0 512 512"
@@ -94,7 +120,11 @@
                                     </a>
                                   </div>
                                   <div class="col-4 text-center">
-                                    <a href="#" class="social-link">
+                                    <a
+                                      href="#"
+                                      target="_blank"
+                                      class="social-link"
+                                    >
                                       <svg
                                         id="Bold"
                                         enable-background="new 0 0 24 24"
@@ -130,10 +160,12 @@
             data-aos-once="false"
           >
             <div class="section__form">
-              <h5 class="form-title mb-2">{{ $t('section.contact.form-title') }}</h5>
+              <h5 class="form-title mb-2">
+                {{ $t("section.contact.form-title") }}
+              </h5>
               <form @submit="sendForm" id="contactForm">
                 <div class="form-group">
-                  <label for="contactName">{{ $t('label.name') }}</label>
+                  <label for="contactName">{{ $t("label.name") }}</label>
                   <input
                     type="text"
                     class="form-control"
@@ -143,7 +175,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="contactTel">{{ $t('label.phone') }}</label>
+                  <label for="contactTel">{{ $t("label.phone") }}</label>
                   <masked-input
                     v-model="commonForm.phone"
                     mask="\+\998 (91) 111-11-11"
@@ -154,7 +186,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="contactMessage">{{ $t('label.msg') }}</label>
+                  <label for="contactMessage">{{ $t("label.msg") }}</label>
                   <textarea
                     class="form-control"
                     id="contactMessage"
@@ -164,10 +196,9 @@
                 </div>
               </form>
             </div>
-            <button
-              class="btn btn-action btn-block mt-3"
-              form="contactForm"
-            >{{ $t('btn.send-default') }}</button>
+            <button class="btn btn-action btn-block mt-3" form="contactForm">
+              {{ $t("btn.send-default") }}
+            </button>
           </div>
         </div>
         <div class="row mt-5">
@@ -201,21 +232,21 @@ import { mapGetters } from "vuex";
 export default {
   props: ["title"],
   components: {
-    MaskedInput
+    MaskedInput,
   },
   data() {
     return {
       form: {
         contact: {
-          message: ""
-        }
-      }
+          message: "",
+        },
+      },
     };
   },
   computed: {
     ...mapGetters({
-      commonForm: "getForm"
-    })
+      commonForm: "getForm",
+    }),
   },
   mounted() {
     document.addEventListener("aos:in:customEventName", ({ detail }) => {
@@ -237,8 +268,8 @@ export default {
       const preparedData = { ...this.commonForm, ...this.form };
       const res = this.$axi.post("form/", preparedData);
       this.$toast.success("Ваше сообщение отправлено");
-    }
-  }
+    },
+  },
 };
 </script>
 

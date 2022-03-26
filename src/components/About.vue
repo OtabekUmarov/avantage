@@ -11,8 +11,8 @@
             data-aos-easing="ease-in-out-back"
             data-aos-once="false"
           >
-            <h3>{{title}}</h3>
-            <p>{{ $t('section.about.p-1') }}</p>
+            <h3>{{ title }}</h3>
+            <p>{{ $t("section.about.p-1") }}</p>
           </div>
           <div
             class="col-lg-7 align-self-center"
@@ -23,8 +23,8 @@
             data-aos-once="false"
           >
             <img
-              v-lazy="content.image_1.image"
-              :alt="content.image_1.alt"
+              v-lazy="content && content.image_1 && content.image_1.image"
+              :alt="content && content.image_1 && content.image_1.alt"
               class="img-fluid rounded img-cover-center"
               style="height:350px"
             />
@@ -49,13 +49,16 @@
               data-aos-easing="ease-in-out"
               data-aos-once="false"
             >
-              <swiper-slide v-for="item in content.carousel" :key="item.image">
+              <swiper-slide
+                v-for="item of content && content.carousel"
+                :key="item.image"
+              >
                 <img v-lazy="item.image" :alt="item.alt" />
               </swiper-slide>
             </swiper>
           </div>
           <div class="col-lg-6 align-self-center my-2">
-            <p>{{ $t('section.about.p-2') }}</p>
+            <p>{{ $t("section.about.p-2") }}</p>
           </div>
         </div>
         <div
@@ -67,24 +70,35 @@
           data-aos-once="false"
         >
           <div class="col-lg-5 align-self-center my-2">
-            <p>{{ $t('section.about.p-3') }}</p>
-            <p>{{ $t('section.about.p-4') }}</p>
-            <p>{{ $t('section.about.p-5') }}</p>
+            <p>{{ $t("section.about.p-3") }}</p>
+            <p>{{ $t("section.about.p-4") }}</p>
+            <p>{{ $t("section.about.p-5") }}</p>
 
             <button
               class="btn btn-action btn-block"
               data-toggle="modal"
               data-target="#portfolioModal"
               @click="currentView = 'List'"
-            >{{ $t('btn.portfolio') }}</button>
+            >
+              {{ $t("btn.portfolio") }}
+            </button>
           </div>
           <div class="col-lg-7 align-self-center my-2">
-            <iframe data-v-3be9a214="" width="560" height="315" src="https://www.youtube.com/embed/o96vSmlobRA" title="О нас" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+            <iframe
+              data-v-3be9a214=""
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/o96vSmlobRA"
+              title="О нас"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="allowfullscreen"
+            ></iframe>
           </div>
         </div>
       </div>
       <div class="stats mt-5 text-center" v-view="viewHandler">
-        <div class="row">
+        <div class="row justify-content-center">
           <div
             class="col-lg-3 align-self-center col-md-6 mt-3 mb-3"
             data-aos="zoom-in"
@@ -101,10 +115,10 @@
                   :duration="1000"
                 />
               </h3>
-              <div class="stats__text">{{$t('section.about.card.1')}}</div>
+              <div class="stats__text">{{ $t("section.about.card.1") }}</div>
             </div>
           </div>
-          <div
+          <!-- <div
             class="col-lg-3 align-self-center col-md-6 mt-3 mb-3"
             data-aos="zoom-in"
             data-aos-delay="100"
@@ -122,7 +136,7 @@
               </h3>
               <div class="stats__text">{{$t('section.about.card.2')}}</div>
             </div>
-          </div>
+          </div> -->
           <div
             class="col-lg-3 align-self-center col-md-6 mt-3 mb-3"
             data-aos="zoom-in"
@@ -139,10 +153,10 @@
                   :duration="1000"
                 />+
               </h3>
-              <div class="stats__text">{{$t('section.about.card.3')}}</div>
+              <div class="stats__text">{{ $t("section.about.card.3") }}</div>
             </div>
           </div>
-          <div
+          <!-- <div
             class="col-lg-3 align-self-center col-md-6 mt-3 mb-3"
             data-aos="zoom-in"
             data-aos-delay="200"
@@ -158,9 +172,9 @@
                   :duration="1000"
                 />%
               </h3>
-              <div class="stats__text">{{$t('section.about.card.4')}}</div>
+              <div class="stats__text">{{ $t("section.about.card.4") }}</div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -180,12 +194,14 @@
             <div class="modal-header" style="border:none">
               <button
                 class="btn btn-link text-dark back"
-                v-show="currentView=='Single'"
-                @click="setView(['List',1])"
+                v-show="currentView == 'Single'"
+                @click="setView(['List', 1])"
               >
                 <i class="fa fa-arrow-left"></i>
               </button>
-              <h5 class="modal-title" v-show="currentView=='List'">{{ $t('title.portfolio') }}</h5>
+              <h5 class="modal-title" v-show="currentView == 'List'">
+                {{ $t("title.portfolio") }}
+              </h5>
               <button
                 type="button"
                 class="close ml-auto my-auto"
@@ -196,7 +212,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <component :is="currentView" @setView="setView($event)" :pid="currentId"></component>
+              <component
+                :is="currentView"
+                @setView="setView($event)"
+                :pid="currentId"
+              ></component>
             </div>
           </div>
         </div>
@@ -219,24 +239,24 @@ export default {
         first: 0,
         second: 0,
         third: 0,
-        fourth: 0
+        fourth: 0,
       },
       swiperOption: {
         speed: 900,
         autoplay: {
           delay: 2500,
-          disableOnInteraction: true
+          disableOnInteraction: true,
         },
         loop: false,
         slidesPerView: "auto",
-        spaceBetween: 30
-      }
+        spaceBetween: 30,
+      },
     };
   },
   components: {
     List,
     Single,
-    AnimatedNumber
+    AnimatedNumber,
   },
   methods: {
     viewHandler(e) {
@@ -264,11 +284,11 @@ export default {
       const opt = {
         message: "Your action was done.",
         type: "default",
-        duration: 1500
+        duration: 1500,
       };
       let instance = this.$toast.open(opt);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -342,6 +362,12 @@ $fs_section: 1rem;
       margin-top: auto;
       margin-bottom: auto;
     }
+  }
+}
+
+@media (max-width:991px) {
+  iframe {
+    width: 100%;
   }
 }
 </style>
