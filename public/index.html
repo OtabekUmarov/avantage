@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description"
-          content="Организация бизнес мероприятий любого формата под ключ.Аренда мебели и оборудования для мероприятия.Услуги Кейтеринга.Услуги регистрации.Услуги застройки стенда.">
-    <meta name="keywords"
-          content="avantage,Ивент-агентство,Организация мероприятий,Регистрация участников,Застройка стенда,Аренда ивент оборудований,Кейтеринг,Выставка,Звук,Свет,ЛЕД Мониторы,Event agency,Organization of events,Registration of participants,Stand construction,Event equipment rental,Catering,Exhibition,Sound,Light,LED Monitors,Video making,Tadbir agentligi,Tadbirlarni tashkil qilish,Ishtirokchilarni ro'yxatdan o'tkazish,Stend qurilishi,Tadbir uskunalarini ijaraga berish,Ovqatlanish,Ko'rgazma,Ovoz,Yorug'lik,LED monitorlar">
-    <meta name="author" content="Уйгун Турсунходжаев">
-    <link rel="icon" href="<%= BASE_URL %>favicon.png">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Организация бизнес мероприятий любого формата под ключ.Аренда мебели и оборудования для мероприятия.Услуги Кейтеринга.Услуги регистрации.Услуги застройки стенда."
+    />
+    <meta
+      name="keywords"
+      content="avantage,Ивент-агентство,Организация мероприятий,Регистрация участников,Застройка стенда,Аренда ивент оборудований,Кейтеринг,Выставка,Звук,Свет,ЛЕД Мониторы,Event agency,Organization of events,Registration of participants,Stand construction,Event equipment rental,Catering,Exhibition,Sound,Light,LED Monitors,Video making,Tadbir agentligi,Tadbirlarni tashkil qilish,Ishtirokchilarni ro'yxatdan o'tkazish,Stend qurilishi,Tadbir uskunalarini ijaraga berish,Ovqatlanish,Ko'rgazma,Ovoz,Yorug'lik,LED monitorlar"
+    />
+    <meta name="author" content="Уйгун Турсунходжаев" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.png" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title><%= htmlWebpackPlugin.options.title %></title>
     <!-- Google Analytics -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview');
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("send", "pageview");
     </script>
     <!-- End Google Analytics -->
-</head>
-<body data-spy="scroll" data-target="#navbar" data-offset="100">
-<noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-        Please enable it to continue.</strong>
-</noscript>
-<div id="app"></div>
-<!-- built files will be auto injected -->
-</body>
+  </head>
+  <body data-spy="scroll" data-target="#navbar" data-offset="100">
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>

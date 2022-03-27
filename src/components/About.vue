@@ -231,6 +231,17 @@ import Single from "@/components/Portfolio/Single";
 import AnimatedNumber from "animated-number-vue";
 export default {
   props: ["title", "content"],
+  head() {
+    return {
+      meta: [
+        {
+          name: "keywords",
+          property: "keywords",
+          content: "test",
+        },
+      ],
+    };
+  },
   data() {
     return {
       currentView: "list",
@@ -261,9 +272,9 @@ export default {
   methods: {
     viewHandler(e) {
       if (e.type == "enter") {
-        this.stats.first = 11;
+        this.stats.first = 14;
         this.stats.second = 7;
-        this.stats.third = 200;
+        this.stats.third = 250;
         this.stats.fourth = 0;
       }
       if (e.type == "exit") {
@@ -365,7 +376,7 @@ $fs_section: 1rem;
   }
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   iframe {
     width: 100%;
   }

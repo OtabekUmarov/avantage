@@ -363,12 +363,17 @@ export default {
   justify-content: center;
   height: 100%;
 }
+.navbar-nav .router-link-exact-active.router-link-active {
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 5px;
+}
 // @media (pointer: coarse) and (hover: none) {
-//   .header {
+  //   .header {
 //     background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black
 //       no-repeat center center scroll;
 //     video {
-//       display: none;
+  //       display: none;
 //     }
 //   }
 // }

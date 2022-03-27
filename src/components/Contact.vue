@@ -20,7 +20,7 @@
                   alt="..."
                 />
               </div>
-              <div class="col-lg-8 m-auto">
+              <div class="col-lg-8 m-auto mb-m-2">
                 <div
                   class="card"
                   data-aos="fade-right"
@@ -29,10 +29,10 @@
                   data-aos-easing="ease-in-out"
                   data-aos-once="false"
                 >
-                  <div class="row no-gutters">
+                  <div class="row no-gutters ">
                     <div class="col">
                       <div
-                        class="card-body d-flex flex-column justify-content-between h-100"
+                        class="card-body d-flex flex-column justify-content-between h-100 "
                       >
                         <div class="card-top">
                           <h5 class="card-title">
@@ -75,7 +75,7 @@
                               </li>
                               <li class="list-group-item">
                                 <div class="row">
-                                  <div class="col-4 text-center">
+                                  <div class="col-3 text-center">
                                     <a
                                       href="https://www.facebook.com/avantage.events.agency"
                                       target="_blank"
@@ -95,7 +95,7 @@
                                       </svg>
                                     </a>
                                   </div>
-                                  <div class="col-4 text-center">
+                                  <div class="col-3 text-center">
                                     <a
                                       href="https://www.instagram.com/avantage.events.agency/"
                                       target="_blank"
@@ -119,7 +119,7 @@
                                       </svg>
                                     </a>
                                   </div>
-                                  <div class="col-4 text-center">
+                                  <div class="col-3 text-center">
                                     <a
                                       href="#"
                                       target="_blank"
@@ -135,6 +135,22 @@
                                       >
                                         <path
                                           d="m12 24c6.629 0 12-5.371 12-12s-5.371-12-12-12-12 5.371-12 12 5.371 12 12 12zm-6.509-12.26 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z"
+                                        />
+                                      </svg>
+                                    </a>
+                                  </div>
+                                  <div class="col-3 text-center">
+                                    <a
+                                      href="https://www.youtube.com/channel/UCjrslqj7dH0h15tI_GVT36Q?sub_confirmation=1"
+                                      target="_blank"
+                                      class="social-link"
+                                    >
+                                      <svg
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M11.603 9.833L9.357 8.785C9.161 8.694 9 8.796 9 9.013v1.974c0 .217.161.319.357.228l2.245-1.048c.197-.092.197-.242.001-.334zM10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm0 13.5c-4.914 0-5-.443-5-3.9s.086-3.9 5-3.9 5 .443 5 3.9-.086 3.9-5 3.9z"
                                         />
                                       </svg>
                                     </a>
@@ -210,7 +226,7 @@
             data-aos-easing="ease-in-out"
             data-aos-once="false"
           >
-            <iframe
+            <!-- <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2995.566303906397!2d69.29037028465578!3d41.34004322342673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4ad010dd425%3A0x5a98eb519ac9451!2z0KbQtdC90YLRgCDQvdCw0YPRh9C90L4t0YLQtdGF0L3QuNGH0LXRgdC60LjRhSDQuCDQvNCw0YDQutC10YLQuNC90LPQvtCy0YvRhSDQuNGB0YHQu9C10LTQvtCy0LDQvdC40Lk!5e0!3m2!1sru!2s!4v1594652942537!5m2!1sru!2s"
               class="map"
               frameborder="0"
@@ -218,7 +234,8 @@
               allowfullscreen
               aria-hidden="false"
               tabindex="0"
-            ></iframe>
+            ></iframe> -->
+            <div style="position:relative;overflow:hidden;border:0"><a href="https://yandex.uz/maps/org/avantage_event_agency/210743548573/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Avantage Event Agency</a><a href="https://yandex.uz/maps/10335/tashkent/category/conference_and_seminar_organizers/184105516/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Организация конференций и семинаров в Ташкенте</a><a href="https://yandex.uz/maps/10335/tashkent/category/catering/184108321/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Кейтеринг в Ташкенте</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUBJUvPkC" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
           </div>
         </div>
       </div>
@@ -234,6 +251,7 @@ export default {
   components: {
     MaskedInput,
   },
+
   data() {
     return {
       form: {
@@ -265,7 +283,10 @@ export default {
   methods: {
     sendForm(e) {
       e.preventDefault();
-      const preparedData = { ...this.commonForm, ...this.form };
+      const preparedData = {
+        ...this.commonForm,
+        ...this.form,
+      };
       const res = this.$axi.post("form/", preparedData);
       this.$toast.success("Ваше сообщение отправлено");
     },
@@ -274,27 +295,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+iframe {
+  border: 0;
+}
 #contact {
   background: $gray-100;
+
   .card {
     border: none;
     border-radius: 0.8rem;
     box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05);
   }
+
   .card-img {
     height: 100%;
     object-position: center;
     object-fit: cover;
   }
+
   .card-title {
     font-size: 1.6rem;
     text-align: center;
   }
+
   .form-title {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
   }
+
   .map {
     width: 100%;
     min-height: 400px;
@@ -302,23 +331,27 @@ export default {
     border-radius: 0.8rem;
     box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05);
   }
+
   .section__form {
     background: white;
     padding: 15px 25px;
     border-radius: 0.8rem;
     box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.05);
   }
+
   .social-link {
     text-decoration: none;
     padding: 10px;
     border-radius: 0.4rem;
     font-size: 1.2rem;
   }
+
   svg {
     width: 25px;
     height: 25px;
     transition: 0.2s fill ease-in;
   }
+
   svg:hover {
     fill: var(--red);
   }
