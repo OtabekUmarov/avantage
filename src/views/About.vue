@@ -12,24 +12,17 @@
 import About from "@/components/About";
 
 export default {
-  head() {
-    return {
-      title: "Epiloge - Build your network in your field of interest",
-      meta: [
-        {
-          name: "description",
-          content:
-            "Epiloge is about connecting in your field of interest. Our vision is to help people share their knowledge, work, projects, papers and ideas and build their network through what they do rather where they live, study or work.",
-        },
-        {
-          property: "og:title",
-          content: "Epiloge - Build your network in your field of interest",
-        },
-        { property: "og:site_name", content: "Epiloge" },
-        { property: "og:type", content: "website" },
-        { name: "robots", content: "index,follow" },
-      ],
-    };
+  metaInfo: {
+    title: 'Default App Title',
+    titleTemplate: '%s | vue-meta Example App',
+    htmlAttrs: {
+      lang: 'en-US'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'An example Vue application with vue-meta.' },
+      { name: 'keywords', content: 'test' }
+    ]
   },
   data() {
     return {

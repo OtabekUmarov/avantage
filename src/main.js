@@ -18,6 +18,13 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css'
 import i18n from './i18n'
 import VueLazyload from 'vue-lazyload'
+import VueMeta from 'vue-meta'
+
+Vue.use(VueMeta)
+// Vue.use(VueMeta, {
+//   keyName: 'head'
+// })
+
 Vue.use(VueLazyload)
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */ )
 

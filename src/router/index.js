@@ -7,7 +7,8 @@ import Service from '../views/Service.vue'
 import Stand from '../views/Stand.vue'
 import Registration from '../views/Registration.vue'
 import Contact from '../views/Contact.vue'
-
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
 Vue.use(VueRouter)
 
 const routes = [{
