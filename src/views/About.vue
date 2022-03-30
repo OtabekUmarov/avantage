@@ -13,15 +13,9 @@ import About from "@/components/About";
 
 export default {
   metaInfo: {
-    title: 'Default App Title',
-    titleTemplate: '%s | vue-meta Example App',
-    htmlAttrs: {
-      lang: 'en-US'
-    },
     meta: [
-      { charset: 'utf-8' },
       { name: 'description', content: 'An example Vue application with vue-meta.' },
-      { name: 'keywords', content: 'test' }
+      { name: 'keywords', content: 'to organize a business event'}
     ]
   },
   data() {
