@@ -121,7 +121,7 @@
                                   </div>
                                   <div class="col-3 text-center">
                                     <a
-                                      href="#"
+                                      href="https://telegram.me/T_Uygun"
                                       target="_blank"
                                       class="social-link"
                                     >
