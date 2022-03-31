@@ -4,7 +4,6 @@
       <h3 class="section__title">{{title}}</h3>
       <div class="section__body">
         <div class="tags d-flex justify-content-between flex-wrap py-2">
-          <div class="tags__left d-flex" style="max-width:80%">
             <div class="input-wrapper d-flex align-items-center" style="min-width:200px">
               <div class="input-group input-group-sm">
                 <div class="input-group-prepend">
@@ -22,6 +21,20 @@
                 />
               </div>
             </div>
+            <div class="tags__right">
+              <button
+                :class="{'pulse':isPulse}"
+                class="btn btn-action"
+                data-toggle="modal"
+                data-target="#checkoutModal"
+              >
+                {{ $t('btn.cart') }}
+                <template v-if="isRender">
+                  <span class="badge badge-light ml-2">{{getCartLength}}</span>
+                </template>
+              </button>
+            </div>
+          <div class="tags__left d-flex">
             <ul class="nav justify-content-start flex-nowrap nav-on-sm">
               <li class="nav-item dropdown d-lg-none" style="width:inherit">
                 <a
@@ -56,19 +69,6 @@
               </li>
               
             </ul>
-          </div>
-          <div class="tags__right">
-            <button
-              :class="{'pulse':isPulse}"
-              class="btn btn-action"
-              data-toggle="modal"
-              data-target="#checkoutModal"
-            >
-              {{ $t('btn.cart') }}
-              <template v-if="isRender">
-                <span class="badge badge-light ml-2">{{getCartLength}}</span>
-              </template>
-            </button>
           </div>
         </div>
         <template v-if="equipments!==null && searchInput!==''">
@@ -548,7 +548,7 @@ export default {
 #equipment {
   @include media-breakpoint-down(sm) {
     .nav-on-sm {
-      width: 180px;
+      // width: 180px;
     }
   }
   .tab-pane.fade {
@@ -704,6 +704,14 @@ export default {
       h6 {
         font-size: 0.8rem;
       }
+    }
+  }
+  @media (max-width: 400px) {
+    .input-wrapper {
+      margin-bottom: 20px;
+    }
+    #equipment .nav-on-sm {
+      width: unset !important;
     }
   }
 }
