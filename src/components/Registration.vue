@@ -312,8 +312,8 @@ export default {
     },
     viewHandler(e) {
       if (e.type == "enter") {
-        this.stats.first = 2;
-        this.stats.second = 30;
+        this.stats.first = 4;
+        this.stats.second = 40;
         this.stats.third = 80000;
       }
       if (e.type == "exit") {
