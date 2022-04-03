@@ -15,7 +15,7 @@
                 class="mb-6"
               >{{ $t('section.catering.p-1') }}</p>
               <p>{{ $t('section.catering.p-2') }}</p>
-              <p>{{ $t('section.catering.p-3') }}</p>
+              <!-- <p>{{ $t('section.catering.p-3') }}</p> -->
             </div>
             <div class="row">
               <div
