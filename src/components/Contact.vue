@@ -56,12 +56,12 @@
                                 </a>
                               </li>
                               <li class="list-group-item">
-                                <a href="tel:+998909870101">
+                                <a href="tel:+998941990000">
                                   <img
                                     src="@/assets/icons/ps.svg"
                                     style="width:20px; margin-left:3px; margin-right:-2px"
                                   />
-                                  +998909870101
+                                  +998941990000
                                 </a>
                               </li>
                               <li class="list-group-item">
